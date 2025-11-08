@@ -12,51 +12,48 @@ include 'koneksi.php';
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #f3e8ff, #ede9fe);
             color: #4b0082;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             min-height: 100vh;
-            margin: 0;
         }
 
         .container {
+            width: 90%;
+            max-width: 800px;
             background: #ffffffcc;
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(10px);
             border-radius: 16px;
-            padding: 30px;
+            padding: 30px 35px;
             box-shadow: 0 8px 20px rgba(75, 0, 130, 0.15);
-            width: 85%;
-            max-width: 700px;
+            margin-top: 50px;
             animation: fadeIn 0.8s ease-in-out;
         }
 
-        h1 {
-            text-align: center;
-            color: #5b21b6;
-            font-size: 24px;
-            margin-bottom: 25px;
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
         }
 
-        h1::after {
-            content: "";
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: #c4b5fd;
-            margin: 6px auto 0;
-            border-radius: 3px;
+        h1 {
+            color: #5b21b6;
+            font-size: 22px;
+            margin: 0;
         }
 
         .btn {
-            display: inline-block;
             background-color: #8b5cf6;
             color: white;
             text-decoration: none;
-            padding: 10px 18px;
-            border-radius: 8px;
+            padding: 10px 16px;
+            border-radius: 10px;
             font-weight: 600;
             transition: all 0.3s ease;
-            margin-bottom: 15px;
+            font-size: 14px;
         }
 
         .btn:hover {
@@ -67,17 +64,17 @@ include 'koneksi.php';
 
         hr {
             border: none;
-            border-top: 1.8px solid #ddd6fe;
-            margin: 15px 0;
+            border-top: 2px solid #e9d5ff;
+            margin: 20px 0;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
+            background: #fff;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(139, 92, 246, 0.1);
-            background: white;
         }
 
         th {
@@ -96,11 +93,11 @@ include 'koneksi.php';
         }
 
         tr:nth-child(even) {
-            background: #f8f5ff;
+            background: #f9f5ff;
         }
 
         tr:hover {
-            background-color: #ede9fe;
+            background-color: #f3e8ff;
             transition: 0.3s;
         }
 
@@ -115,7 +112,7 @@ include 'koneksi.php';
         footer {
             text-align: center;
             color: #aaa;
-            margin-top: 20px;
+            margin-top: 25px;
             font-size: 12.5px;
         }
 
@@ -125,16 +122,17 @@ include 'koneksi.php';
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>✨ Data Mahasiswa ✨</h1>
-
-        <a href="tambah.php" class="btn">+ Tambah Mahasiswa</a>
+        <header>
+            <h1>📘 Data Mahasiswa</h1>
+            <a href="tambah.php" class="btn">+ Tambah Data</a>
+        </header>
         <hr>
 
         <?php
