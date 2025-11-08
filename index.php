@@ -8,134 +8,122 @@ include 'koneksi.php';
     <meta charset="UTF-8">
     <title>Data Mahasiswa</title>
     <style>
-        /* === Reset dan Font === */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            transition: all 0.3s ease;
-        }
-
         body {
-            background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f3e8ff, #ede9fe);
+            color: #4b0082;
             display: flex;
             justify-content: center;
             align-items: flex-start;
+            min-height: 100vh;
+            margin: 0;
             padding: 40px 0;
         }
 
-        /* === Card Container === */
         .container {
-            width: 90%;
-            max-width: 850px;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(15px);
+            background: #ffffffcc;
+            backdrop-filter: blur(8px);
             border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(238, 156, 167, 0.3);
             padding: 40px;
+            box-shadow: 0 10px 25px rgba(75, 0, 130, 0.2);
+            width: 90%;
+            max-width: 900px;
             animation: fadeIn 0.8s ease-in-out;
         }
 
-        /* === Judul === */
         h1 {
             text-align: center;
-            color: #e91e63;
-            font-size: 32px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 25px;
+            color: #5b21b6;
+            font-size: 28px;
+            margin-bottom: 30px;
         }
 
         h1::after {
             content: "";
             display: block;
-            width: 70px;
+            width: 80px;
             height: 3px;
-            background: #f48fb1;
-            margin: 10px auto;
-            border-radius: 2px;
+            background: #c4b5fd;
+            margin: 8px auto 0;
+            border-radius: 3px;
         }
 
-        /* === Tombol Tambah === */
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #f06292, #ec407a);
+            background-color: #8b5cf6;
             color: white;
             text-decoration: none;
-            padding: 12px 26px;
-            border-radius: 50px;
+            padding: 12px 25px;
+            border-radius: 10px;
             font-weight: 600;
-            box-shadow: 0 4px 12px rgba(240, 98, 146, 0.3);
-            margin-bottom: 25px;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
         }
 
         .btn:hover {
+            background-color: #7c3aed;
             transform: scale(1.05);
-            background: linear-gradient(135deg, #ec407a, #f48fb1);
-            box-shadow: 0 6px 15px rgba(233, 30, 99, 0.4);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
         }
 
         hr {
             border: none;
-            border-top: 2px solid #f8bbd0;
-            margin: 15px 0 25px;
+            border-top: 2px solid #ddd6fe;
+            margin: 20px 0;
         }
 
-        /* === Tabel === */
         table {
             width: 100%;
             border-collapse: collapse;
             border-radius: 12px;
             overflow: hidden;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
         }
 
         th {
-            background: linear-gradient(135deg, #ec407a, #f48fb1);
+            background-color: #8b5cf6;
             color: white;
+            padding: 14px;
             text-align: left;
-            padding: 15px;
             font-size: 15px;
         }
 
         td {
-            padding: 13px 15px;
-            border-bottom: 1px solid #ffe0ec;
-            color: #555;
+            padding: 12px 16px;
+            border-bottom: 1px solid #ede9fe;
             font-size: 14px;
+            color: #4b0082;
         }
 
         tr:nth-child(even) {
-            background-color: #fff0f6;
+            background: #f5f3ff;
         }
 
         tr:hover {
-            background-color: #ffe3eb;
+            background-color: #ede9fe;
+            transition: 0.3s;
         }
 
         .no-data {
             text-align: center;
-            color: #999;
+            color: #888;
             font-style: italic;
             margin-top: 15px;
             font-size: 15px;
         }
 
-        /* === Footer === */
         footer {
             text-align: center;
-            color: #999;
+            color: #aaa;
             margin-top: 35px;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         footer span {
-            color: #e91e63;
+            color: #6d28d9;
             font-weight: 600;
         }
 
-        /* === Animasi === */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -144,7 +132,7 @@ include 'koneksi.php';
 </head>
 <body>
     <div class="container">
-        <h1>💖 Data Mahasiswa Polinela 💖</h1>
+        <h1>✨ Data Mahasiswa ✨</h1>
 
         <a href="tambah.php" class="btn">+ Tambah Mahasiswa</a>
         <hr>
@@ -170,7 +158,7 @@ include 'koneksi.php';
         ?>
 
         <footer>
-            <p>© 2025 <span>Sistem Data Mahasiswa</span> | Politeknik Negeri Lampung 🌸</p>
+            <p>© 2025 <span>Sistem Data Mahasiswa</span> | Politeknik Negeri Lampung 💜</p>
         </footer>
     </div>
 </body>
