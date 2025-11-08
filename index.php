@@ -8,49 +8,63 @@ include 'koneksi.php';
     <meta charset="UTF-8">
     <title>Data Mahasiswa</title>
     <style>
-        /* === Gaya Umum === */
+        /* === Reset dan Umum === */
+        * {
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
         body {
-            font-family: "Segoe UI", sans-serif;
-            background-color: #f5f7fa;
             margin: 0;
             padding: 0;
+            background: linear-gradient(135deg, #c3aed6, #e6d5f7, #f3e8ff);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
         }
 
         .container {
-            width: 85%;
+            width: 90%;
             max-width: 900px;
-            margin: 50px auto;
             background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            padding: 30px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            margin: 50px 0;
+            padding: 40px;
+            animation: fadeIn 0.8s ease-in-out;
         }
 
         h1 {
             text-align: center;
-            color: #1565C0;
-            margin-bottom: 20px;
+            color: #6a1b9a;
+            font-size: 28px;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
         }
 
         /* === Tombol === */
         .btn {
             display: inline-block;
-            background-color: #1565C0;
+            background: linear-gradient(135deg, #8e24aa, #ab47bc);
             color: white;
             text-decoration: none;
-            padding: 10px 18px;
-            border-radius: 6px;
+            padding: 12px 22px;
+            border-radius: 8px;
             font-weight: 600;
-            transition: 0.3s;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
         }
 
         .btn:hover {
-            background-color: #0d47a1;
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #7b1fa2, #9c27b0);
+            box-shadow: 0 4px 10px rgba(156, 39, 176, 0.3);
         }
 
         hr {
             border: none;
-            border-top: 2px solid #eee;
+            border-top: 2px solid #f1e4fc;
             margin: 20px 0;
         }
 
@@ -58,47 +72,60 @@ include 'koneksi.php';
         table {
             width: 100%;
             border-collapse: collapse;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
-        }
-
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
+            margin-top: 10px;
         }
 
         th {
-            background-color: #1565C0;
+            background: #9c27b0;
             color: white;
+            text-align: left;
+            padding: 14px 16px;
+            font-size: 15px;
+        }
+
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+            color: #555;
         }
 
         tr:nth-child(even) {
-            background-color: #f3f6fa;
+            background: #f9f5fc;
         }
 
         tr:hover {
-            background-color: #e1ecf9;
+            background: #f3e5f5;
+            transition: 0.3s;
         }
 
         .no-data {
             text-align: center;
-            color: #777;
+            color: #888;
             font-style: italic;
-            margin-top: 15px;
+            margin-top: 20px;
+            font-size: 15px;
         }
 
         footer {
             text-align: center;
-            color: #777;
-            margin-top: 30px;
-            font-size: 14px;
+            color: #aaa;
+            margin-top: 35px;
+            font-size: 13px;
         }
 
+        /* === Animasi === */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📘 Daftar Mahasiswa</h1>
+        <h1>📘 Data Mahasiswa</h1>
 
         <a href="tambah.php" class="btn">+ Tambah Data</a>
         <hr>
@@ -119,12 +146,12 @@ include 'koneksi.php';
             }
             echo "</table>";
         } else {
-            echo "<p class='no-data'>Belum ada data mahasiswa.</p>";
+            echo "<p class='no-data'>Belum ada data mahasiswa 😢</p>";
         }
         ?>
 
         <footer>
-            <p>© 2025 Sistem Data Mahasiswa | Politeknik Negeri Lampung</p>
+            <p>© 2025 Sistem Data Mahasiswa | Politeknik Negeri Lampung 💜</p>
         </footer>
     </div>
 </body>
