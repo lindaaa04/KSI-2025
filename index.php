@@ -14,37 +14,36 @@ include 'koneksi.php';
             color: #4b0082;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding: 40px 0;
         }
 
         .container {
             background: #ffffffcc;
             backdrop-filter: blur(8px);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 25px rgba(75, 0, 130, 0.2);
-            width: 90%;
-            max-width: 900px;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(75, 0, 130, 0.15);
+            width: 85%;
+            max-width: 700px;
             animation: fadeIn 0.8s ease-in-out;
         }
 
         h1 {
             text-align: center;
             color: #5b21b6;
-            font-size: 28px;
-            margin-bottom: 30px;
+            font-size: 24px;
+            margin-bottom: 25px;
         }
 
         h1::after {
             content: "";
             display: block;
-            width: 80px;
+            width: 60px;
             height: 3px;
             background: #c4b5fd;
-            margin: 8px auto 0;
+            margin: 6px auto 0;
             border-radius: 3px;
         }
 
@@ -53,23 +52,23 @@ include 'koneksi.php';
             background-color: #8b5cf6;
             color: white;
             text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 10px;
+            padding: 10px 18px;
+            border-radius: 8px;
             font-weight: 600;
             transition: all 0.3s ease;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .btn:hover {
             background-color: #7c3aed;
             transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+            box-shadow: 0 3px 10px rgba(124, 58, 237, 0.3);
         }
 
         hr {
             border: none;
-            border-top: 2px solid #ddd6fe;
-            margin: 20px 0;
+            border-top: 1.8px solid #ddd6fe;
+            margin: 15px 0;
         }
 
         table {
@@ -77,26 +76,27 @@ include 'koneksi.php';
             border-collapse: collapse;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.1);
+            background: white;
         }
 
         th {
             background-color: #8b5cf6;
             color: white;
-            padding: 14px;
+            padding: 10px 12px;
             text-align: left;
-            font-size: 15px;
+            font-size: 14px;
         }
 
         td {
-            padding: 12px 16px;
-            border-bottom: 1px solid #ede9fe;
-            font-size: 14px;
+            padding: 10px 12px;
+            border-bottom: 1px solid #f3e8ff;
+            font-size: 13.5px;
             color: #4b0082;
         }
 
         tr:nth-child(even) {
-            background: #f5f3ff;
+            background: #f8f5ff;
         }
 
         tr:hover {
@@ -108,15 +108,15 @@ include 'koneksi.php';
             text-align: center;
             color: #888;
             font-style: italic;
-            margin-top: 15px;
-            font-size: 15px;
+            margin-top: 10px;
+            font-size: 14px;
         }
 
         footer {
             text-align: center;
             color: #aaa;
-            margin-top: 35px;
-            font-size: 13px;
+            margin-top: 20px;
+            font-size: 12.5px;
         }
 
         footer span {
