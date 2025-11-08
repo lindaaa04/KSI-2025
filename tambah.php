@@ -34,11 +34,13 @@ if (isset($_POST['submit'])) {
         .container {
             background: #ffffffcc;
             backdrop-filter: blur(8px);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 25px rgba(75, 0, 130, 0.2);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(75, 0, 130, 0.15);
             text-align: center;
-            width: 400px;
+            width: 85%;
+            max-width: 700px;
+            animation: fadeIn 0.8s ease-in-out;
         }
 
         h1 {
